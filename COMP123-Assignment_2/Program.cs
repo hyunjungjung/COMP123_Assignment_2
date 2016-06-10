@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
- * Author: Joanne (Hyunjung) Jung
- * Student # : 300432364
- * Date Modified: May 31, 2016
- * Description: Main method fror driver class Program for Assignment 1
- * Version: 0.0.5 - Added public methods Fight and Show, and implemented the Hero class 
- * by creating a new hero object
- */
+
+   /*
+    * Author: Joanne (Hyunjung) Jung
+    * Student # : 300432364
+    * Date Modified: June 9th, 2016
+    * Description: Main method fror driver class Program for Assignment 2
+    * Version: 0.0.1 - Innitial Commit
+    */
 namespace COMP123_Assignment_2
 {
     /**
