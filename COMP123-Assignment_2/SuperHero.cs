@@ -6,16 +6,17 @@ using System.Threading.Tasks;
    /*
     * Author: Joanne (Hyunjung) Jung
     * Student # : 300432364
-    * Date Modified: June 9th, 2016
+    * Date Modified: June 10th, 2016
     * Description: SuperHero class for Assignment 2
-    * Version: 0.0.2 - Updated project with SuperHero class and other details
+    * Version: 0.0.3 - Updated project with SuperHero class and other details
     */
 namespace COMP123_Assignment_2
 { 
     public class SuperHero : Hero
     {
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        private string[] _superPowers;
+        private string[] _superPowers = new string[1];
+       //List<string> _superPowers = new List<string>();
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -48,7 +49,7 @@ namespace COMP123_Assignment_2
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
          * <summary>
-         * This method randomly generates three random superpowers from a list
+         * This method randomly generates three random superpowers from the list
          * </summary>
          * 
          * @private
@@ -58,18 +59,33 @@ namespace COMP123_Assignment_2
 
         private void _generateRandomPowers()
         {
-           // int powerCount = this._superPowers;
+            // int powerCount = this._superPowers;
+            List<string> SuperPowers = new List<string>();
+            SuperPowers.Add(("Super Speed"));
+            SuperPowers.Add("Super Strength");
+            SuperPowers.Add("Body Armour");
+            SuperPowers.Add("Flight");
+            SuperPowers.Add("Fire Generation");
+            SuperPowers.Add("Weather Control");
 
+            Random random = new Random();
+            
             for (int Count = 0; Count < 3; Count++)
             {
-                List<string> randomPowers = new List<string>();
-                randomPowers.Add(("Super Speed"));
-                randomPowers.Add("Super Strength");
-                randomPowers.Add("Body Armour");
-                randomPowers.Add("Flight");
-                randomPowers.Add("Fire Generation");
-                randomPowers.Add("Weather ControlSuper Speed");
+                
+               int randomPower = random.Next(1, SuperPowers.Count);
+
+                _superPowers[Count] = SuperPowers.ElementAt(randomPower);
+                Console.WriteLine("{0}", SuperPowers[randomPower]);
+                SuperPowers.RemoveAt(randomPower);
+               
+                //Console.WriteLine(_superPowers[Count]);
+                
+                //string powers = string.Join("/", _superPowers);
+
             }
+            Console.WriteLine();
+            
         }
         // PIBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -83,7 +99,14 @@ namespace COMP123_Assignment_2
 
         public void ShowPowers()
         {
-            Console.WriteLine("{0}", _superPowers);
+            //Console.WriteLine("==========================================");
+            //Console.WriteLine("         Earthman's super powers     ");
+           // Console.WriteLine("{0}", SuperPowers);
+            _generateRandomPowers();
+            //Console.WriteLine("      {0}          ", SuperPowers);
+            //Console.WriteLine(_superPowers);
+
+            
         }
     }
 }

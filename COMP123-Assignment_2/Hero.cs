@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    /*
-    * Author: Joanne (Hyunjung) Jung
-    * Student # : 300432364
-    * Date Modified: June 9th, 2016
-    * Description: Hero class for Assignment 2
-    * Version: 0.0.2 - Updated project with SuperHero class and other details
-    */
+/*
+ * Author: Joanne (Hyunjung) Jung
+ * Student # : 300432364
+ * Date Modified: June 10th, 2016
+ * Description: Hero class for Assignment 2
+ * Version: 0.0.3 - Updated project with SuperHero class and other details
+ */
 namespace COMP123_Assignment_2
 {
     /**
