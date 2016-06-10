@@ -9,7 +9,7 @@ using System.Threading.Tasks;
     * Student # : 300432364
     * Date Modified: June 9th, 2016
     * Description: Main method fror driver class Program for Assignment 2
-    * Version: 0.0.1 - Innitial Commit
+    * Version: 0.0.2 - Updated project with SuperHero class and other details
     */
 namespace COMP123_Assignment_2
 {
@@ -30,9 +30,16 @@ namespace COMP123_Assignment_2
         {
             // create a new instance of the Hero Class
             Hero Ken = new Hero("KEN");
+            Console.WriteLine("Ken, the Hero");
             Ken.Show();
             Ken.Fight();
 
+            // new instance of SuperHero class
+            SuperHero Joanne = new SuperHero("Joanne");
+            Console.WriteLine("Joanne, the Super Hero");
+            Joanne.Show();
+            Joanne.ShowPowers();
+            Joanne.Fight();
         }
     }
 }
