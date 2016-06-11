@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-   /*
-    * Author: Joanne (Hyunjung) Jung
-    * Student # : 300432364
-    * Date Modified: June 10th, 2016
-    * Description: SuperHero class for Assignment 2
-    * Version: 0.0.3 - Updated project with SuperHero class and other details
-    */
+/*
+ * Author: Joanne (Hyunjung) Jung
+ * Student # : 300432364
+ * Date Modified: June 10th, 2016
+ * Description: SuperHero class for Assignment 2
+ * Version: 0.0.3 - Updated project with SuperHero class and other details
+ */
 namespace COMP123_Assignment_2
-{ 
+{
     public class SuperHero : Hero
     {
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        private string[] _superPowers = new string[1];
-       //List<string> _superPowers = new List<string>();
+        private string[] _superPowers = new string[3];
+        //List<string> _superPowers = new List<string>();
 
         // PUBLIC PROPERTIES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -40,11 +40,11 @@ namespace COMP123_Assignment_2
          * 
          * @constructor Hero
          */
-        public SuperHero(string _name) 
-            :base(_name)
+        public SuperHero(string _name)
+            : base(_name)
         {
             this.Name = _name;
-            this._generateRandomPowers();
+            _generateRandomPowers();
         }
         // PRIVATE METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -69,23 +69,23 @@ namespace COMP123_Assignment_2
             SuperPowers.Add("Weather Control");
 
             Random random = new Random();
-            
+
             for (int Count = 0; Count < 3; Count++)
             {
-                
-               int randomPower = random.Next(1, SuperPowers.Count);
+
+                int randomPower = random.Next(1, SuperPowers.Count);
 
                 _superPowers[Count] = SuperPowers.ElementAt(randomPower);
-                Console.WriteLine("{0}", SuperPowers[randomPower]);
+                //Console.WriteLine("{0}", SuperPowers[randomPower]);
                 SuperPowers.RemoveAt(randomPower);
-               
+
                 //Console.WriteLine(_superPowers[Count]);
-                
+
                 //string powers = string.Join("/", _superPowers);
 
             }
             Console.WriteLine();
-            
+
         }
         // PIBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -99,14 +99,17 @@ namespace COMP123_Assignment_2
 
         public void ShowPowers()
         {
-            //Console.WriteLine("==========================================");
-            //Console.WriteLine("         Earthman's super powers     ");
-           // Console.WriteLine("{0}", SuperPowers);
-            _generateRandomPowers();
-            //Console.WriteLine("      {0}          ", SuperPowers);
-            //Console.WriteLine(_superPowers);
-
             
+            Console.WriteLine("      Earthman's Three Superpowers     ");
+            Console.WriteLine("------------------------------------------");
+            Console.WriteLine();
+            foreach (string powers in SuperPowers)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("           {0}         ", powers);
+                Console.ResetColor();
+            }
+            Console.WriteLine("==========================================");
         }
     }
 }

@@ -165,7 +165,7 @@ namespace COMP123_Assignment_2
             {
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("         Hey Hero! You missed!          ");
+                Console.WriteLine("      Hey Hero! You missed a hit!          ");
                 Console.ResetColor();
             }
             Console.WriteLine("==========================================");
@@ -181,7 +181,9 @@ namespace COMP123_Assignment_2
          */
         public void Show()
         {
-            Console.WriteLine("==========================================");
+            //Console.WriteLine("==========================================");
+            Console.WriteLine("      Earthman's Three Abilities     ");
+            Console.WriteLine("------------------------------------------");
             Console.WriteLine("    Strength     Speed      Health     ");
             Console.WriteLine("      {0}           {1}        {2}", _strength, _speed, _health);
 
