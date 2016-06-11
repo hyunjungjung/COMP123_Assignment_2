@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-/*
- * Author: Joanne (Hyunjung) Jung
- * Student # : 300432364
- * Date Modified: June 10th, 2016
- * Description: SuperHero class for Assignment 2
- * Version: 0.0.3 - Updated project with SuperHero class and other details
- */
+    /*
+     * Author: Joanne (Hyunjung) Jung
+     * Student # : 300432364
+     * Date Modified: June 10th, 2016
+     * Description: SuperHero class for Assignment 2
+     * Version: 0.0.4 - Final commit
+     */
 namespace COMP123_Assignment_2
 {
     public class SuperHero : Hero
@@ -72,20 +72,10 @@ namespace COMP123_Assignment_2
 
             for (int Count = 0; Count < 3; Count++)
             {
-
                 int randomPower = random.Next(1, SuperPowers.Count);
-
                 _superPowers[Count] = SuperPowers.ElementAt(randomPower);
-                //Console.WriteLine("{0}", SuperPowers[randomPower]);
                 SuperPowers.RemoveAt(randomPower);
-
-                //Console.WriteLine(_superPowers[Count]);
-
-                //string powers = string.Join("/", _superPowers);
-
             }
-            Console.WriteLine();
-
         }
         // PIBLIC METHODS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         /**
@@ -98,8 +88,7 @@ namespace COMP123_Assignment_2
          */
 
         public void ShowPowers()
-        {
-            
+        {          
             Console.WriteLine("      Earthman's Three Superpowers     ");
             Console.WriteLine("------------------------------------------");
             Console.WriteLine();
